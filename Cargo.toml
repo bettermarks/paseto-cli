@@ -1,0 +1,12 @@
+[package]
+name = "paseto-cli"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.98"
+base64 = "0.22.1"
+clap = { version = "^4", features = ["env", "derive", "wrap_help"] }
+humantime = "2.2.0"
+pasetors = { version = "^0.7", features = ["serde"] }
+thiserror = "2.0.12"
