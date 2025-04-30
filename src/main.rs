@@ -1,6 +1,6 @@
 use anyhow::{Ok, Result};
 use base64::prelude::*;
-use clap::{ArgAction, Parser, Subcommand};
+use clap::{Parser, Subcommand};
 use humantime::Duration;
 use pasetors::{
     claims::Claims,
@@ -9,7 +9,6 @@ use pasetors::{
     version4::V4,
 };
 use std::io::{self, Read};
-use std::str::FromStr;
 use thiserror::Error;
 
 #[derive(Error, Debug)]
