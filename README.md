@@ -28,6 +28,12 @@ Options:
 cargo run -- key | cargo run -- generate --assertion p14n --expires-in 5s
 ```
 
+## Installation
+
+```shell
+cargo install --git "https://github.com/bettermarks/paseto-cli"
+```
+
 ## TODO
 
 - validation
