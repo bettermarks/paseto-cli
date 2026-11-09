@@ -1,0 +1,25 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "local>bettermarks/renovate-config",
+    ":automergeStableNonMajor",
+    "customManagers:githubActionsVersions"
+  ],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "semanticCommitType": "fix",
+    "schedule": ["0 8 * * 1"]
+  },
+  "packageRules": [
+    {
+      "description": ["Change in rust version increases the patch version"],
+      "matchDepNames": ["rust"],
+      "semanticCommitType": "fix"
+    },
+    {
+      "matchManagers": ["cargo"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
+    }
+  ]
+}
